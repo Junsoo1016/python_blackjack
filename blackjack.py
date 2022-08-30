@@ -27,5 +27,14 @@ def total(turn):
     return total   
 
 # check for winner
+def reavealDealerHand():
+    if len(dealer_hand) == 2:
+        return dealer_hand[0]
+    elif len(dealer_hand) > 2:
+        return dealer_hand[0], dealer_hand[1]
 
 # game loop
+for _ in range(2):
+    dealCard(dealer_hand)
+    dealCard(player_hand)
+
